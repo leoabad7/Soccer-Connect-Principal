@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SoccerConnect - Conectando Talentos ao Futebol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+  <div class="container header-container">
+    <a href="#" class="logo">
+      <img src="public/soccerconect_logo-removebg-preview.png" alt="Logo SoccerConnect" style="height: 40px;">
+    </a>
+
+    <div class="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#mission">Nossa Missão</a></li>
+        <li><a href="#history">História</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <section class="hero">
+    <div class="container hero-content fade-in">
+        <h1 class="custom-title">
+            <span class="black-text">CONECTANDO TALENTOS</span><br />
+            <span class="orange-text">AO FUTEBOL REAL</span>
+        </h1>
+        <p>Toda criança merece a chance de jogar, independentemente de sua situação financeira. Nós conectamos jovens talentos a programas de futebol acessíveis em sua região.</p>
+        
+        <div class="search-container">
+            <input type="text" id="buscaLocal" placeholder="Digite seu bairro ou CEP" />
+            <button onclick="buscarNoMaps()">Buscar</button>
+        </div>
+
+        <a href="#" class="btn btn-dark">Encontrar Escolas de Futebol</a>
+    </div>
+</section>
+
+<script>
+  function buscarNoMaps() {
+    const termo = document.getElementById("buscaLocal").value.trim();
+    if (termo === "") {
+      alert("Por favor, digite um bairro ou CEP.");
+      return;
+    }
+
+    const url = `https://www.google.com/maps/search/escolinhas+de+futebol+proximas${encodeURIComponent(termo)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+
+    <!-- Mission Section -->
+    <section class="section" id="mission">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Nossa Missão</h2>
+            </div>
+            <div class="mission-content fade-in delay-1">
+                <p>No SoccerConnect, acreditamos que o futebol é mais do que um esporte - é uma ferramenta poderosa para transformar vidas e construir comunidades mais fortes. Nosso objetivo é remover as barreiras que impedem crianças de comunidades carentes de acessar programas de futebol de qualidade.</p>
+            </div>
+            <div class="mission-cards">
+                <div class="mission-card fade-in delay-1">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Programas Acessíveis</h3>
+                    <p>Conectamos crianças a programas de futebol gratuitos ou de baixo custo em suas comunidades, removendo barreiras financeiras.</p>
+                </div>
+                <div class="mission-card fade-in delay-2">
+                    <i class="fas fa-users"></i>
+                    <h3>Construção Comunitária</h3>
+                    <p>Fortalecemos comunidades através do esporte, criando redes de apoio e oportunidades para jovens em situação de vulnerabilidade.</p>
+                </div>
+                <div class="mission-card fade-in delay-3">
+                    <i class="fas fa-star"></i>
+                    <h3>Desenvolvimento de Talentos</h3>
+                    <p>Identificamos e nutrimos talentos, proporcionando caminhos para desenvolvimento esportivo e pessoal de jovens atletas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact fade-in">
+        <div class="container impact-container">
+            <h2>Criando Impacto Real</h2>
+            <p>Desde nossa fundação, já conectamos mais de 5.000 crianças a programas de futebol em todo o país. Nossos parceiros relatam aumento de 70% na participação de crianças de baixa renda em seus programas, e 85% dos pais afirmam que a participação de seus filhos melhorou seu desempenho escolar e habilidades sociais.</p>
+            <a href="#" class="btn">Conheça Nossas Histórias</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="history">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>O Que Dizem as Famílias</h2>
+            </div>
+            <div class="testimonial-cards">
+                <div class="testimonial-card fade-in delay-1">
+                    <p>"Graças ao SoccerConnect, meu filho encontrou uma escola de futebol perto de casa que cabia no nosso orçamento. Ele está mais feliz e disciplinado desde que começou a treinar."</p>
+                    <div class="author">- Ana Silva, mãe do João (10 anos)</div>
+                </div>
+                <div class="testimonial-card fade-in delay-2">
+                    <p>"Nunca pensei que conseguiria colocar meu filho em uma escolinha de qualidade. O SoccerConnect nos mostrou opções que não conhecíamos e hoje ele sonha em ser jogador profissional."</p>
+                    <div class="author">- Carlos Mendes, pai do Lucas (12 anos)</div>
+                </div>
+                <div class="testimonial-card fade-in delay-3">
+                    <p>"Minha filha encontrou não apenas um esporte, mas uma família no futebol. O programa que encontramos através do SoccerConnect mudou completamente sua autoestima."</p>
+                    <div class="author">- Mariana Oliveira, mãe da Sofia (9 anos)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <div class="container fade-in">
+            <h2>Pronto para se juntar à nossa comunidade?</h2>
+            <p>Encontre programas de futebol acessíveis perto de você e dê ao seu filho a oportunidade de crescer através do esporte.</p>
+            <a href="#" class="btn">Encontre programas perto de você</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                   <a href="#" class="logo">
+      <img src="public/soccerconect_logo-removebg-preview.png" alt="Logo SoccerConnect" style="height: 40px;">
+    </a>
+                    </a>
+                    <p>Conectando crianças de comunidades carentes a programas de futebol acessíveis desde 2025.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#mission">Nossa Missão</a></li>
+                        <li><a href="#history">Histórias de Sucesso</a></li>
+                        <li><a href="#">Programas Parceiros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> contato@soccerconnect.org</p>
+                    <p><i class="fas fa-phone"></i> (11) 94066-6760</p>
+                    <p><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SoccerConnect. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(element);
+            });
+
+            
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const nav = document.querySelector('nav ul');
+
+            mobileMenu.addEventListener('click', function () {
+                nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
